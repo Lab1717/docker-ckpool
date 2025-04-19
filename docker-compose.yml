@@ -1,5 +1,3 @@
-version: "3.7"
-
 services:
   docker-ckpool:
     image: docker-ckpool
@@ -10,4 +8,4 @@ services:
     volumes:
       - /home/umbrel/umbrel/app-data/ckpool/conf:/srv/ckpool/conf
       - /home/umbrel/umbrel/app-data/ckpool/logs:/srv/ckpool/logs
-    restart: unless-stopped
+    restart: on-failure
